@@ -38,7 +38,7 @@ for rr=1:length(filedors)
     xlswrite(strcat(wname,'.xls'),[1:1:181]);
     average = 0.0;
     for time=1:10
-        [Results, Gt, t1, t2] = GenerativeTriTL(Train_Data,Test_Data,Parameter_Setting)
+        [Results,pzd_t] = GenerativeTriTL(Train_Data,Test_Data,Parameter_Setting)
         [res] = xlsread(strcat(wname,'.xls'));
         average  =  average+ max(Results(:,2)');
         xlswrite(strcat(wname,'.xls'),[res;Results(:,2)']);
