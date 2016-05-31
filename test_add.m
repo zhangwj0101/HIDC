@@ -5,7 +5,7 @@
 Train_Data = 'mydata/Train_Data.txt';
 Test_Data = 'mydata/Test_Data.txt';
 Parameter_Setting = 'mydata/Parameter_Setting.txt';
-str = 'C:\mydata_add_withtraintest_cutshortdoc/';
+str = 'D:\mydata_add_withtraintest/';
 FileList=dir(str);
 ff = 1;
 for rr=1:length(FileList)
@@ -44,7 +44,7 @@ for rr=1:length(filedors)
         xlswrite(strcat(wname,'.xls'),[res;Results(:,2)']);
     end
     
-    [res] = xlsread(strcat('Results.xls'));
-    xlswrite(strcat('Results.xls'),[res;average/10]);
+    [res] = xlsread(strcat('average.xls'));
+    xlswrite(strcat('average.xls'),[res;average/10]);
 end
 
